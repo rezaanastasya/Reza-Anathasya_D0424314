@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@400;700&display=swap');
+
+:root {
+  --pink-soft: #f7e1ea;
+  --purple-soft: #a086c3;
+  --dark-soft: #232136;
+  --text-dark: #232136;
+  --text-light: #fff;
+  --gray-soft: #f2f2f5;
+  --shadow: rgba(160, 134, 195, 0.12) 0px 4px 24px;
+  --accent: #d291bc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, var(--pink-soft) 0%, var(--purple-soft) 100%);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, var(--dark-soft) 65%, var(--purple-soft) 100%);
+  color: var(--text-light);
+  padding: 40px 0 20px 0;
+  box-shadow: var(--shadow);
+  border-bottom-left-radius: 60px 30px;
+  border-bottom-right-radius: 60px 30px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-content {
+  gap: 40px;
+}
+
+.profile-img img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--pink-soft);
+  box-shadow: 0 4px 24px var(--shadow);
+  background: var(--purple-soft);
+}
+
+.intro {
+  flex: 1;
+}
+
+.intro h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.8rem;
+  letter-spacing: 1.5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.intro h2 {
+  margin: 0 0 10px 0;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: 12px 0 12px 0;
+  color: var(--pink-soft);
+}
+
+.bio {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.social-links {
+  margin: 10px 0;
+  display: flex;
+  gap: 18px;
+}
+
+.social-links a {
+  background: var(--pink-soft);
+  color: var(--dark-soft);
+  text-decoration: none;
+  padding: 7px 15px;
+  border-radius: 22px;
+  font-weight: 600;
+  box-shadow: 0 2px 10px var(--shadow);
+  transition: background 0.2s, color 0.2s;
+}
+
+.social-links a:hover {
+  background: var(--purple-soft);
+  color: var(--text-light);
+}
+
+.contact {
+  margin-top: 7px;
+  font-size: 1.05rem;
+  color: var(--pink-soft);
+  display: flex;
+  gap: 15px;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 42px;
+}
+
+.about h2,
+.skills h2 {
+  color: var(--purple-soft);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+.about p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--dark-soft);
+  background: var(--gray-soft);
+  padding: 18px 20px;
+  border-radius: 18px;
+  box-shadow: 0 2px 10px var(--shadow);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.skill-card {
+  flex: 1 1 270px;
+  background: var(--gray-soft);
+  box-shadow: 0 2px 10px var(--shadow);
+  border-radius: 18px;
+  padding: 18px 20px 13px 20px;
+  margin-bottom: 20px;
+  min-width: 260px;
+}
+
+.skill-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.16rem;
+  color: var(--purple-soft);
+}
+
+.progress {
+  background: #e0c8f7;
+  border-radius: 8px;
+  height: 10px;
+  width: 100%;
+  margin-bottom: 7px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 10px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--purple-soft) 70%, var(--pink-soft) 100%);
+  box-shadow: 0 1px 8px var(--accent);
+}
+
+.skill-card ul {
+  padding-left: 18px;
+  margin: 6px 0 0 0;
+  font-size: 1.01rem;
+}
+
+footer {
+  text-align: center;
+  color: var(--purple-soft);
+  background: transparent;
+  padding: 24px 0 18px 0;
+  font-size: 1.02rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+  .profile-img img {
+    width: 120px;
+    height: 120px;
+  }
+  .intro h1 {
+    font-size: 2rem;
+  }
+  main {
+    padding: 0 8px;
+  }
+  .skills-list {
+    flex-direction: column;
+    gap: 14px;
+  }
+}

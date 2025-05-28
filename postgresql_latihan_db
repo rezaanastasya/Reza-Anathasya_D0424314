@@ -1,0 +1,21 @@
+-- Membuat database
+CREATE DATABASE latihan_db;
+
+-- Menggunakan database (catatan saja, tidak dijalankan di file SQL)
+-- \c latihan_db
+
+-- Membuat tabel siswa
+CREATE TABLE siswa (
+id serial PRIMARY KEY,
+nama varchar(100),
+umur integer,
+kelas varchar(10)
+);
+
+-- Menambahkan data contoh
+INSERT TO siswa (nama, umur, kelas) VALUES
+('Sasha', 19, '10A'),
+('Yadit', 19, '10B'),
+('Serlia', 20, '10A'),
+('Nesa', 18, '10B'),
+('Fina', 20, '10C');
